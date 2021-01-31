@@ -11,6 +11,12 @@ public class Project {
         this.noOfModules = noOfModules;
     }
 
+    public Project(int uId, String name, int noOfModules) {
+        this.uId = uId;
+        this.name = name;
+        this.noOfModules = noOfModules;
+    }
+
     public int getuId() {
         return uId;
     }
@@ -27,10 +33,5 @@ public class Project {
         System.out.println(this.name+"  "+this.uId+"  "+this.noOfModules);
     }
 
-    public void update(String name,int noOfModules)
-    {
-        this.name=name;
-        this.noOfModules=noOfModules;
-    }
 }
 

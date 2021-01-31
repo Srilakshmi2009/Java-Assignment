@@ -3,11 +3,15 @@ package com.company.service;
 import com.company.framework.Menu;
 import com.company.framework.MenuItem;
 import com.company.framework.MenuProvider;
+import com.company.model.Project;
+import com.company.repository.ProjectRepository;
 
 public class projectService implements MenuProvider {
-    public void createProject()
+    ProjectRepository projectRepository=new ProjectRepository();
+    public void createProject(String name,int modules)
     {
-
+        Project project=new Project(ProjectIDGenerator.generateID(),name,modules);
+        projectRepository.save(project);
     }
     public void  updateProject(String employeeId)
     {
